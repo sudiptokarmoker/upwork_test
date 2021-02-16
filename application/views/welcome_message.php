@@ -3,17 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
-
 	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>css/styles.css">
-
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>css/jquery-ui.min.css">
 </head>
 
 <body>
-
 	<div id="container">
 		<h1>Task magnement list</h1>
 		<div class="row">
@@ -24,7 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<label for="txtTaskName">Task Name : </label>
 						</div>
 						<div class="col-grid-3">
-							<input type="text" class="txtTaskName form-input" id="txtTaskName" placeholder="Task Name" />
+							<input type="text" class="txtTaskName form-input" id="txtTaskName" placeholder="Task Name" autocomplete="false" />
 						</div>
 					</div>
 					<div class="form-field">
@@ -32,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<label for="txtTaskDate">Task Date : </label>
 						</div>
 						<div class="col-grid-3">
-							<input type="text" class="txtTaskDate form-input" id="txtTaskDate" placeholder="Task Date" />
+							<input type="text" class="txtTaskDate form-input" id="txtTaskDate" placeholder="Task Date" autocomplete="false" />
 						</div>
 					</div>
 					<div class="form-field">
@@ -55,17 +52,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h2>Column 1</h2>
 				<p>Some text..</p>
 			</div>
-
 			<div class="column" style="background-color:#bbb;">
 				<h2>Column 2</h2>
 				<p>Some text..</p>
 			</div>
-
 			<div class="column" style="background-color:#ccc;">
 				<h2>Column 3</h2>
 				<p>Some text..</p>
 			</div>
-
 			<div class="column" style="background-color:#ddd;">
 				<h2>Column 4</h2>
 				<p>Some text..</p>
@@ -77,7 +71,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<script type="text/javascript" src="<?php echo site_url(); ?>js/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-
+			$(".txtTaskDate").datepicker();
 		});
 	</script>
 </body>
