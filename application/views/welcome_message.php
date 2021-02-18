@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</form>
 			</div>
 		</div>
-		<?php if ($data && count($data) > 0) : ?>
+		<?php if (isset($data) && $data && count($data) > 0) : ?>
 			<div class="row">
 				<?php foreach ($data as $row) : ?>
 					<div class="column" style="background-color:#aaa;">
@@ -84,10 +84,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				// process the form
 				$.ajax({
 						type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-						url: '<?php echo base_url()."/tasks/index/"; ?>', // the url where we want to POST
+						url: '<?php echo base_url()."index.php/tasks/test/"; ?>', // the url where we want to POST
 						data: formData, // our data object
 						dataType: 'json', // what type of data do we expect back from the server
-						encode: true
+						//encode: true
 					})
 					// using the done promise callback
 					.done(function(data) {

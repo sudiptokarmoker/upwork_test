@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -52,3 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// $route['task'] = 'TasksCotroller/index';
+//$route['tasks_controller/index'] = 'tasks';
+
+$route['tasks'] = 'Tasks_controller/index';
+// $route['tasks/insert'] = 'Tasks_controller/insert';
+
+$route['tasks/insert'] = 'Tasks_controller/insert';
+$route['tasks/delete'] = 'Tasks_controller/delete';
+// $route['ajax-requestPost']['post'] = 'Tasks/ajaxRequestPost';

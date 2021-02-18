@@ -69,8 +69,12 @@ p.footer {
 
 .column {
     float: left;
-    width: 25%;
-    padding: 20px;
+    width: 21%;
+    margin: 2%;
+    padding: 2%;
+    position: relative;
+    border: 3px solid skyblue;
+    border-radius: 5px;
 }
 
 /* Clear floats after the columns */
@@ -146,3 +150,6 @@ input[type=submit]:hover {
     display: table;
     clear: both;
 }
+.column span{position: absolute; right: 10px; top: 10px;}
+.delete-task{cursor: pointer;}
+.print-error-msg{color: red; font-size: 14px; font-weight: bold; font-family: monospace;}
